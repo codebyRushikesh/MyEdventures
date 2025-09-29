@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+  }
+
+  .img{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(unsplash1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .teamHeading {
+    background-color: rgba(212, 207, 207, 0.985);
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .members {
+    background-color: rgba(212, 207, 207, 0.985);
+    border-radius: 10px;
+  }
+
+  footer {
+    width: 100%;
+  }
+  
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="index.html">MyEdventures</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" href="AboutUs.html" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <!-- <a class="dropdown-item " href="AboutUs.html"> About Us</a> -->
+            <a class="dropdown-item active" href="#Meet-Our-Team">Meet Our Team</a>
+          </div>
+
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link " href="Destination.html"  >
+            Destination
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="Contact.html" tabindex="-1">Contact</a>
+        </li>
+      </ul>
+      <div class="mx-2">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">login</button>
+        <button class="btn btn-info" data-toggle="modal" data-target="#signupModal">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- login modal  -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to MyEdventures</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="signupInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="signupInputPassword1">Password</label>
+              <input type="password" class="form-control" id="signupInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="signupCheck1">
+              <label class="form-check-label" for="signupCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--   signup modal -->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Get an Account </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+          <form>
+            <div class="form-group">
+              <label for="last-Name">First Name</label>
+              <input id="last-Name" type="text" class="form-control" placeholder="last Name">
+            </div>
+            <div class="form-group">
+              <label for="last-Name">last Name</label>
+              <input id="last-Name" type="text" class="form-control" placeholder="last Name">
+            </div>
+            <div class="form-group">
+              <label for="phone-number">Phone Number</label>
+              <input type="number" class="form-control" id="phone-number" placeholder="012-345-6789" min="0000000000"
+                max="9999999999">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="cexampleInputPassword1"> ConformPassword</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about us img       -->
+  <div class="img cantainer-fluid d-flex flex-row align-items-center">
+    <div class="container-fluid bg-warning ">
+      <h1 class="text-light ml-5 pl-5 pt-1">About Us</h1>
+      <br>
+      <p class="text-light ml-5 pl-5 strong">Learn more About Us</p>
+    </div>
+    <div class="col-8"></div>
+  </div>
+    <!-- <div class="col-8"></div> -->
+
+
+
+  </div>
+
+  <!-- about us  -->
+
+  <div class="container-fluid py-5 bg-warning">
+    <div class="row">
+      <div class="col ml-5">
+        <h1 class="text-danger">We're MyEdventures!</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-8  mt-2 text-danger order-1">
+        <p class="ml-5 mr-5"><strong>Plan less and more ‘go with the flow’ and just see where life takes you. With these
+            intentions, Rushikesh Bahekar started Edventure in 2015. Since then, Edventure has grown into a tour
+            operator and
+            travel agent with 4 team members.</strong> </p>
+
+        <p class="ml-5 mr-5">Edventure wants you to connect to the real India : meet the locals in Maharshtra, Rajasthan
+          Orrisa, Assam or More places.
+          explore the vibrant jungle and stay at unique hotels and lodges, all with their own personal story. We care
+          for
+          India’s exuberant nature and work with partners (our hotels and rental car providers) who attach great
+          importance to sustainability, who intend to be frontrunners in this field.</p>
+
+        <p class="ml-5 mr-5">When you travel with us, you avoid the touristic hotspots as much as possible. You can book
+          your individual
+          round trip and explore the country in your own tempo by driving a rental car, but you can also join one of our
+          special yoga and meditation group trips.</p>
+
+        <p class="ml-5 mr-5">We compile tailor-made trips for you, your wishes are central. Because we are living in
+          india we know
+          all
+          destinations and accommodations from personal experience and we visit our hotel and other providers on a
+          regular
+          basis. In this way, we are able to help you compile your perfect holiday. The personal contact with our
+          clients
+          is what makes our work so fun!</p>
+      </div>
+      <div class="col col-md-4  order-2">
+
+        <ul class="mx-5 mt-2">
+          <li class="text-success ">
+            <h5>We are a motivated team of 4 travelers</h5>
+          </li>
+          <br>
+          <li class="text-success ">
+            <h5>From the Central India</h5>
+          </li>
+          <br>
+          <li class="text-success ">
+            <h5>Located in Vidharbha</h5>
+          </li>
+          <br>
+          <li class="text-success ">
+            <h5>We speak Marathi, English and Hindi</strong>
+          </li>
+          <br>
+          <li class="text-success ">
+            <h5>And are both tour operator and travel agent</h5>
+          </li>
+          <br>
+          <li class="text-success ">
+            <h5>We offer tailor-made services to make your travel dream come true</h5>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+
+
+  <div class="container">
+    <div class="container mt-3">
+      <div class="row featurette d-flex flex-row align-items-center">
+        <div class="col-md-7 ">
+          <h2 class="featurette-heading">Our Expertise in Mountain Climbing <span class="text-muted"></span>
+          </h2>
+          <br>
+          <p class="lead">Our Expertise in Mountain Climbing
+
+            At MyEdventures, mountain climbing isn’t just a sport—it’s our passion and lifelong pursuit. Over the years,
+            we’ve honed our skills across some of the world’s most challenging terrains, from rugged alpine routes to
+            towering Himalayan peaks.</p>
+        </div>
+        <div class="col-md-5 ">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="man-standing-on-mountaincopy.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container mt-3">
+      <div class="row featurette d-flex flex-row align-items-center">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">We Work with the Professional Water Explorers <span class=""></span>
+          </h2>
+
+          <p class="lead">
+
+            Exploring the mysteries of water—whether it’s the deep blue ocean, hidden underground springs, or vast
+            freshwater lakes—requires skill, precision, and a deep respect for nature. At our organization, we proudly
+            collaborate with professional water explorers who dedicate their lives to uncovering the secrets of the
+            world’s waterways.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="sebastian-pena-lambarri-7i5HMCGupVw-unsplash (1).jpg" alt="">
+        </div>
+      </div>
+
+      <hr>
+      <div class="container mt-3">
+        <div class="row featurette d-flex flex-row align-items-center">
+          <div class="col-md-7 ">
+            <h2 class="featurette-heading">We’re the Best Jungle Adventurers of Central India<span
+                class="text-muted"></span>
+            </h2>
+            <p class="lead">
+
+              Exploring the wild heart of Central India is more than just a journey—it’s an exhilarating adventure that
+              connects us with nature’s raw beauty. From the dense sal forests of Kanha to the tiger trails of Pench and
+              the mystical landscapes of Satpura, we’ve trekked, camped, and discovered hidden gems that few have seen.
+            </p>
+          </div>
+          <div class="col-md-5 ">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              src="adrian-schledorn-DlsN0HqzvlQ-unsplash.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Our team -->
+
+  <div id="Meet-Our-Team" class="container-fluid text-center bg-info mt-5 ">
+    <div class="mt-5">
+      <h1 class="teamHeading">Meet Our Team</h1>
+    </div>
+
+    <div class="row py-5 offset-md-1">
+      <div class="members border border-rounded border-dark p-3 col-md-3 ml-md-5 mx-sm-5 mx-md-0 mt-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+          src="WhatsApp Image 2025-09-27 at 9.23.11 PM.jpeg">
+        <br>
+        <h2>Rushikesh Bahekar</h2>
+        <p class="text-justify"> I’m Rushikesh, a passionate traveler and certified local guide who loves exploring
+          rugged forts, lush jungles, and hidden trails. Trekking isn’t just a hobby for me—it’s a way to connect with
+          history, nature, and new people every day.</p>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modalrushikesh">
+          View details »</button>
+      </div>
+      <!-- /.col-lg-4 -->
+      <div class="members border border-rounded border-dark p-3 col-md-3 ml-md-5 mx-sm-5 mx-md-0 mt-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+          src="uttam-lakra-j5RIoC8IP5w-unsplash.jpg">
+        <br>
+        <h2>Vanshika Agrawal</h2>
+        <p class="text-justify"> Hello, I’m Vanshika, a passionate historian and storyteller dedicated to bringing the
+          past to life. I believe every monument, street, and artifact holds a story waiting to be uncovered—and I love
+          sharing those discoveries with curious travelers.</p>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modalvanshika">
+          View details »</button>
+      </div>
+
+      <!-- /.col-lg-4 -->
+      <div class="members border border-rounded border-dark p-3 col-md-3 ml-md-5 mx-sm-5 mx-md-0 mt-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+          src="mael-balland-lR8RHChsUAY-unsplash.jpg">
+        <br>
+        <h2>Sahil Jaronde</h2>
+        <p class="text-justify"> Hi, I’m Sahil, a certified scuba diver and ocean enthusiast who lives for exploring
+          vibrant reefs, mysterious wrecks, and crystal-clear blue waters. Diving isn’t just a profession for me—it’s a
+          passion I love to share with fellow adventurers.</p>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modalsahil">
+          View details »</button>
+      </div>
+
+      ><!-- /.col-lg-4 -->
+
+
+      <div class="members border border-rounded border-dark p-3 col-md-3 ml-md-5 mx-sm-5 mx-md-0  mt-md-3">
+
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+          src="shipman-northcutt-sgZX15Da8YE-unsplash.jpg">
+        <br>
+        <h2>Martin Mills</h2>
+        <strong class="d-inline-block mb-2 text-primary">Company Director</strong>
+        <p class="text-justify">Hello, I’m Martin, the Director of [Company Name], and a lifelong advocate for
+          meaningful travel experiences. My vision is simple: to create journeys that connect people with culture,
+          nature, and authentic adventure.</p>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modalmartin">
+          View details »</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!--modal Rushikesh   -->
+  <div class="modal fade" id="Modalrushikesh" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Meet Your Guide</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Hello! I’m <strong>Rushikesh</strong>, a passionate traveler and certified local guide who loves
+            exploring rugged
+            forts, lush jungles,
+            and hidden trails. Trekking isn’t just a hobby for me—it’s a way to connect with history, nature, and new
+            people every day.</p>
+
+          <h5> What I Offer</h5>
+
+          <p>Fort Treks & Heritage Walks
+            Discover centuries-old fortresses, hear fascinating legends, and enjoy breathtaking views from ancient
+            ramparts.
+
+            Jungle & Wildlife Trails
+            Explore serene forests, spot wildlife, and learn about the region’s rich biodiversity.
+
+            Custom Adventures
+            Whether you’re after a relaxed nature walk or a challenging multi-day trek, I tailor each trip to your
+            interests and fitness level.</p>
+
+          <h5>Why Travel With Me</h5>
+
+          <p>Deep knowledge of local culture, history, and flora/fauna
+
+            Focus on safety and eco-friendly practices
+
+            Fun, friendly, and interactive experiences
+
+            Let’s trek beyond the usual tourist path and create unforgettable memories together!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- modal Vanshika -->
+
+  <div class="modal fade" id="Modalvanshika" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle"> Meet Your Historian Guide</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <p>Hello, I’m <strong>Vanshika</strong> , a passionate historian and storyteller dedicated to bringing the
+            past to life. I believe every monument, street, and artifact holds a story waiting to be uncovered—and I
+            love sharing those discoveries with curious travelers.</p>
+
+          <h5>What I Offer</h5>
+
+          <p>Historical City Tours
+            Explore ancient streets, architectural marvels, and hidden landmarks while learning the fascinating tales
+            behind them.
+
+            Museum & Heritage Site Walks
+            Gain deeper insights into priceless artifacts and the cultures that shaped them.
+
+            Custom Themed Experiences
+            From royal dynasties to trade routes and colonial history, I tailor tours to your specific interests.</p>
+
+          <h5>Why Explore with Me</h5>
+
+          <p>Advanced knowledge of local and global history
+
+            Engaging, story-driven tours that make history come alive
+
+            Balanced approach combining facts, legends, and cultural context
+
+            Join me for an immersive journey through time, where every step reveals a new chapter of the past.</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal sahil -->
+  <div class="modal fade" id="Modalsahil" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Meet Your Guide</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Hi!, I’m <strong>Sahil</strong>, a certified scuba diver and ocean enthusiast who lives for exploring
+            vibrant
+            reefs, mysterious wrecks, and crystal-clear blue waters. Diving isn’t just a profession for me—it’s a
+            passion
+            I love to share with fellow adventurers.</p>
+
+          <h5>What I Offer</h5>
+
+          <p>Guided Scuba Dives
+            From shallow reef tours for beginners to deep-water explorations for advanced divers, I ensure a safe and
+            thrilling underwater journey.
+
+            Training & Certification Support
+            Intro sessions, refresher courses, and help toward internationally recognized certifications.
+
+            Underwater Photography & Videography
+            Capture your dive memories with professional-quality images and videos.</p>
+
+          <h5>Why Dive With Me</h5>
+
+          Certified professional with extensive local knowledge of marine life and dive sites
+
+          Strict safety standards and eco-friendly diving practices
+
+          Patient, friendly guidance for all skill levels—from first-timers to seasoned divers
+
+          Join me to discover a breathtaking world beneath the waves and create memories that last a lifetime!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal martin -->
+  <div class="modal fade" id="Modalmartin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Meet Our Company Director</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Hello, I’m <strong>Martin</strong>, the Director of [Company Name], and a lifelong advocate for meaningful
+            travel experiences. My vision is simple: to create journeys that connect people with culture, nature, and
+            authentic adventure.</p>
+
+          <h5>My Role</h5>
+
+          <p>Strategic Leadership
+            Guiding our team to design exceptional tours that balance comfort, discovery, and sustainability.
+
+            Quality & Safety Oversight
+            Ensuring every trip meets the highest standards of service, safety, and environmental responsibility.
+
+            Innovative Travel Concepts
+            Introducing new destinations and unique experiences so every traveler finds something unforgettable.</p>
+
+          <h5>Why Travel With Us</h5>
+
+          <p>A dedicated, passionate team inspired by my own love of exploration
+
+            Thoughtful itineraries blending local insight with global standards
+
+            A commitment to responsible tourism and community support
+
+            Whether you’re planning a family holiday, an adventurous trek, or a bespoke cultural journey, I’m proud to
+            lead a company that turns your travel dreams into reality.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="footer mt-auto pt-3 pb-2 footer-dark bg-dark">
+    <div class="container">
+      <p class="float-md-right "><a href="#">Back to top</a></p>
+      <p class="text-muted ">© 2025-2026 MyEdventures, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+
+
+
+</html>

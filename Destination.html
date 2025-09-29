@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: azure;
+  }
+
+  .image {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(ahmet-yuksek-mybaeBtxOj8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    border-radius: 15px;
+    background-color: rgba(212, 207, 207, 0.985);
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="index.html">MyEdventures</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown1" href="AboutUs.html" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item " href="AboutUs.html"> About Us</a>
+            <a class="dropdown-item disabled" href="#">Meet Out Team</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link " href="Destination.html">
+            Destination
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="Contact.html" tabindex="-1">Contact</a>
+        </li>
+      </ul>
+      <div class="mx-2">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">login</button>
+        <button class="btn btn-info" data-toggle="modal" data-target="#signupModal">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- login modal  -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to MyEdventures</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="signupInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="signupInputPassword1">Password</label>
+              <input type="password" class="form-control" id="signupInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="signupCheck1">
+              <label class="form-check-label" for="signupCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--   signup modal -->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Get an Account </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+          <form>
+            <div class="form-group">
+              <label for="last-Name">First Name</label>
+              <input id="last-Name" type="text" class="form-control" placeholder="last Name">
+            </div>
+            <div class="form-group">
+              <label for="last-Name">last Name</label>
+              <input id="last-Name" type="text" class="form-control" placeholder="last Name">
+            </div>
+            <div class="form-group">
+              <label for="phone-number">Phone Number</label>
+              <input type="number" class="form-control" id="phone-number" placeholder="012-345-6789" min="0000000000"
+                max="9999999999">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+              <label for="cexampleInputPassword1"> ConformPassword</label>
+              <input type="password" class="form-control" id="cexampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--     destination img -->
+  <div class="image cantainer-fluid d-flex flex-row align-items-center">
+    <div class="container-fluid bg-warning ">
+      <h1 class="text-light ml-5">About Destinations</h1>
+    </div>
+    <div class="col-8"></div>
+  </div>
+
+
+  <!--  destination content -->
+  <div class="container-fluid bg-warning">
+    <!-- album  -->
+    <div class="py-5 px-md-5">
+      <div class="container-fluid ">
+
+        <div class="row">
+          <!-- Maharashtra -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="maharashtra-fort.jpg"></img>
+              <div class="card-body">
+                <h1>Maharashtra</h1>
+                <p class="card-text">
+                <h5>✈️ 9–10 Day Maharashtra Discovery Tour</h5>
+                <strong>Best Season: October–March</strong> <br>
+                Highlights: Mumbai • Aurangabad • Ajanta–Ellora • Pune • Hill Stations • Konkan Coast</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalmaharashtra">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--modal maharashtra -->
+          <div class="modal fade card" id="Modalmaharashtra" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">✈️ 9–10 Day Maharashtra Discovery Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <h4>Highlights: Mumbai • Aurangabad • Ajanta–Ellora • Pune • Hill Stations • Konkan Coast</h4><br>
+
+                  <h5>Day 1 – Arrival in Mumbai</h5>
+                  <p>Pickup from airport/railway station.
+
+                    Visit Gateway of India, Marine Drive, Chhatrapati Shivaji Maharaj Terminus (UNESCO site).
+
+                    Evening stroll at Juhu Beach & street-food tasting.
+                    Overnight in Mumbai.</p>
+                  <h5>Day 2 – Mumbai Sightseeing</h5>
+                  <p>Half-day Elephanta Caves excursion (ferry from Gateway).
+
+                    Explore Prince of Wales Museum & Colaba market.
+
+                    Optional nightlife or Bollywood studio tour.
+
+                    Overnight in Mumbai.</p>
+                  <h5>Day 3 – Mumbai ➜ Aurangabad</h5>
+                  <p>Morning train/flight to Aurangabad (approx. 1 hr flight).
+
+                    Visit Bibi Ka Maqbara & Daulatabad Fort.
+
+                    Overnight in Aurangabad.</p>
+                  <h5>Day 4 – Ajanta Caves Excursion</h5>
+                  <p>Full-day guided trip to Ajanta Caves (ancient Buddhist murals).
+
+                    Return to Aurangabad for overnight stay.</p>
+
+                  <h5>Day 5 – Ellora & Grishneshwar</h5>
+                  <p>Explore Ellora Caves including Kailasa Temple.
+
+                    Stop at Grishneshwar Jyotirlinga Temple.
+
+                    Evening free. Overnight in Aurangabad.
+
+
+
+                    .</p>
+                  <h5>Day 6 – Aurangabad ➜ Pune</h5>
+                  <p>Drive or train to Pune (approx. 5–6 hrs).
+
+                    Visit Shaniwar Wada, Aga Khan Palace, Dagdusheth Ganpati Temple.
+
+                    Overnight in Pune</p>
+                  <h5>Day 7 – Pune ➜ Lonavala & Khandala</h5>
+                  <p>Scenic drive to Lonavala/Khandala hill stations.
+
+                    See Bhushi Dam, Tiger’s Leap, Karla & Bhaja Caves.
+
+                    Overnight in Lonavala.</p>
+                  <h5>Day 8 – Lonavala ➜ Mahabaleshwar</h5>
+                  <p>Travel to Mahabaleshwar (approx. 4 hrs).
+
+                    Enjoy viewpoints like Arthur’s Seat, Venna Lake boating, Mapro Garden.
+
+                    Overnight in Mahabaleshwar.</p>
+                  <h5>Day 9 – Mahabaleshwar ➜ Alibaug / Konkan Coast</h5>
+                  <p>
+                    Drive to Alibaug beach town.
+
+                    Relax on sandy beaches, explore Kolaba Fort.
+
+                    Fresh seafood dinner. Overnight in Alibaug.</p>
+                  <h5>Day 10 – Return to Mumbai / Departure</h5>
+                  <p>
+                    Morning ferry or drive back to Mumbai.
+
+                    Transfer to airport/railway station.</p>
+                  <hr>
+                  <h5>💡 Customization Options</h5>
+                  <p>Add wildlife safari in Tadoba or Pench if you prefer nature.
+
+                    Swap in Nashik wine tour or Shirdi pilgrimage for spiritual travelers.
+
+                    Extend Konkan coast stay for water sports at Ganpatipule or Tarkarli.</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- goa -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="Goabeach.jpg"></img>
+              <div class="card-body">
+                <h1>Goa</h1>
+                <p class="card-text">
+                <h5>🌴 9–10 Day Goa Explorer Tour</h5>
+                <strong>Best Season: November–March</strong> <br>
+                <p>Highlights: North & South Goa Beaches • Heritage Old Goa • Adventure & Wildlife • Island Hopping</p>
+
+
+
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalgoa">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Goa -->
+          <div class="modal fade" id="Modalgoa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🌴 9–10 Day Goa Explorer Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <h5>Highlights: Mumbai • Aurangabad • Ajanta–Ellora • Pune • Hill Stations • Konkan Coast</h5><br>
+
+                  <h4>Day 1 – Arrival in Goa (North Goa)</h4>
+                  <p>Airport/rail pickup and hotel check-in.
+
+                    Evening beach walk at Calangute or Baga.
+
+                    Welcome dinner with Goan seafood. Overnight in North Goa.</p>
+                  <h4>Day 2 – North Goa Beaches & Forts</h4>
+                  <p>Explore Fort Aguada, SinQ Beach, and Candolim.
+
+                    Water sports at Baga/Anjuna (parasailing, banana boat).
+
+                    Nightlife at beach clubs. Overnight in North Goa.</p>
+                  <h4>Day 3 – Old Goa Heritage Trail</h4>
+                  <p></p>
+                  <h4></h4>
+                  <p>Visit UNESCO churches: Basilica of Bom Jesus, Se Cathedral.
+
+                    Walk through Fontainhas Latin Quarter (colorful Portuguese lanes).
+
+                    Evening Mandovi River sunset cruise. Overnight in Panaji.</p>
+                  <h4>Day 4 – Island Hopping</h4>
+                  <p>Full-day excursion to Grande Island: snorkeling, dolphin spotting.
+
+                    Picnic lunch on the beach.
+
+                    Return to Panaji for overnight stay.</p>
+                  <h4>Day 5 – Wildlife & Spice Plantation</h4>
+                  <p>Early morning trip to Bhagwan Mahavir Wildlife Sanctuary or Bondla.
+
+                    Guided spice plantation tour with traditional Goan meal.
+
+                    Overnight in South Goa.</p>
+                  <h4>Day 6 – South Goa Leisure</h4>
+                  <p>Relax at Colva, Betalbatim, or Benaulim beaches.
+
+                    Enjoy spa treatments or yoga session.
+
+                    Sunset at Cabo de Rama Fort. Overnight in South Goa.</p>
+                  <h4>Day 7 – Adventure & Trek</h4>
+                  <p>Day trek to Dudhsagar Waterfalls (monsoon season best).
+
+                    Optional white-water rafting in Mhadei (seasonal).
+
+                    Overnight in South Goa.</p>
+                  <h4>Day 8 – Cultural & Culinary Day</h4>
+                  <p>Market visit in Margao for local crafts.
+
+                    Goan cooking class with feni tasting.
+
+                    Evening free to enjoy a quiet beachside café. Overnight in South Goa.</p>
+                  <h4>Day 9 – Free Day or Optional Excursions</h4>
+                  <p>Options: Kayaking in Sal backwaters, cycling tour of villages, or scuba diving refresher.
+
+                    Overnight in South Goa.</p>
+                  <h4>Day 10 – Departure</h4>
+                  <p>Transfer to Dabolim Airport or Madgaon railway station for onward journey.</p>
+                  <hr>
+                  <h4>💡 Customization Tips</h4>
+                  <p>Add a two-day yoga retreat or wellness spa for relaxation.
+
+                    Combine with a short trip to nearby Gokarna (Karnataka) for serene beaches.
+
+                    Ideal for honeymooners, families, or adventure seekers with flexible pacing.</p>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- kerla -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="kerala.jpg"></img>
+              <div class="card-body">
+                <h1>Kerala</h1>
+                <p class="card-text">
+                <h5>🌿 9–10 Day “God’s Own Country” Tour</h5>
+                <strong>Best Season: September–March</strong> <br>
+                <p>
+                  Highlights: Kochi • Munnar • Thekkady • Alleppey Backwaters • Kovalam & Trivandrum</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalkerla">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal kerla -->
+          <div class="modal fade p-1" id="Modalkerla" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🌿 9–10 Day Kerala “God’s Own Country” Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Highlights: Kochi • Munnar • Thekkady • Alleppey Backwaters • Kovalam & Trivandrum</h5><br>
+
+                  <h4>Day 1 – Arrival in Kochi</h4>
+                  <p>Pickup from Cochin International Airport.
+
+                    Visit Fort Kochi, St. Francis Church, Dutch Palace, and Chinese Fishing Nets.
+
+                    Evening Kathakali dance performance.
+
+                    Overnight in Kochi.</p>
+                  <h4>Day 2 – Kochi ➜ Munnar (Approx. 4–5 hrs drive)</h4>
+                  <p>Scenic drive through tea plantations & waterfalls (Cheeyappara, Valara).
+
+                    Check-in and leisure evening at Munnar hill station.
+
+                    Overnight in Munnar.</p>
+                  <h4>Day 3 – Munnar Sightseeing</h4>
+                  <p>Tea Museum, Mattupetty Dam, Echo Point, and Eravikulam National Park (Nilgiri Tahr).
+
+                    Evening stroll through local spice markets.
+
+                    Overnight in Munnar.</p>
+                  <h4>Day 4 – Munnar ➜ Thekkady (Approx. 3–4 hrs)</h4>
+                  <p>
+                    Travel to Periyar/Thekkady.
+
+                    Spice plantation visit and evening Kalaripayattu (martial art) show.
+
+                    Overnight in Thekkady.</p>
+                  <h4>Day 5 – Periyar Wildlife & Bamboo Rafting</h4>
+                  <p>Early morning boat ride on Periyar Lake for wildlife spotting (elephants, birds).
+
+                    Optional bamboo rafting or short jungle trek.
+
+                    Overnight in Thekkady.
+                  </p>
+                  <h4>Day 6 – Thekkady ➜ Alleppey (Approx. 4 hrs)</h4>
+                  <p>Drive to Alleppey and board a private houseboat.
+
+                    Cruise through serene backwaters with onboard Kerala cuisine.
+
+                    Overnight on the houseboat.</p>
+                  <h4>Day 7 – Alleppey ➜ Kumarakom or Kollam</h4>
+                  <p>Disembark after breakfast.
+
+                    Relax at a lakeside resort or visit Kumarakom Bird Sanctuary.
+
+                    Overnight in Kumarakom/Kollam.</p>
+                  <h4>Day 8 – Kumarakom ➜ Kovalam (Approx. 5 hrs)</h4>
+                  <p>Travel to Kovalam beach town.
+
+                    Evening at Lighthouse Beach for sunset.
+
+                    Overnight in Kovalam.</p>
+                  <h4>Day 9 – Kovalam & Trivandrum</h4>
+                  <p>Morning leisure at beaches or Ayurveda spa session.
+
+                    Half-day Trivandrum city tour: Padmanabhaswamy Temple, Napier Museum.
+
+                    Overnight in Kovalam/Trivandrum.</p>
+                  <h4>Day 10 – Departure</h4>
+                  <p>Transfer to Trivandrum International Airport for onward journey.</p>
+                  <h4>💡 Customization Ideas</h4>
+                  <hr>
+                  <p>Add Varkala beach stay for cliffside views.
+
+                    Include Wayanad for rainforest trekking.
+
+                    Ideal for honeymooners, family vacations, or wellness retreats.</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- karnataka -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="karnataka.jpg"></img>
+              <div class="card-body">
+                <h1>Karnataka</h1>
+                <p class="card-text">
+                <h5>🏞️ 9–10 Day Heritage & Nature Tour</h5>
+                <strong>Best Season: October–March</strong> <br>
+                <p>Highlights: Bengaluru • Mysuru • Coorg • Chikmagalur • Hampi • Badami</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalkarnataka">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal karnataka -->
+          <div class="modal fade p-1" id="Modalkarnataka" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🏞️ 9–10 Day Karnataka Heritage & Nature Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Highlights: Bengaluru • Mysuru • Coorg • Chikmagalur • Hampi • Badami</h5><br>
+                  <h4>Day 1 – Arrival in Bengaluru</h4>
+                  <p>Pickup from Kempegowda International Airport.
+
+                    Visit Lalbagh Botanical Garden, Vidhana Soudha, and Cubbon Park.
+
+                    Evening stroll at MG Road or Brigade Road.
+
+                    Overnight in Bengaluru.</p>
+                  <h4>Day 2 – Bengaluru ➜ Mysuru (Approx. 3.5 hrs)</h4>
+                  <p>Scenic drive to Mysuru.
+
+                    Explore Mysore Palace, Chamundi Hill Temple, St. Philomena’s Church.
+
+                    Evening light & sound show at the palace.
+
+                    Overnight in Mysuru.</p>
+                  <h4>Day 3 – Mysuru ➜ Coorg (Approx. 4 hrs)
+                  </h4>
+                  <p>Drive through coffee plantations to Coorg.
+
+                    Visit Abbey Falls & Raja’s Seat viewpoint.
+
+                    Overnight in Coorg.
+                  </p>
+                  <h4>Day 4 – Coorg Coffee & Culture
+                  </h4>
+                  <p>Morning visit to Dubare Elephant Camp.
+
+                    Coffee estate tour & tasting.
+
+                    Optional visit to Talacauvery (origin of River Kaveri).
+
+                    Overnight in Coorg.</p>
+                  <h4>Day 5 – Coorg ➜ Chikmagalur (Approx. 5 hrs)</h4>
+                  <p>Transfer to Chikmagalur, another coffee paradise.
+
+                    Mullayanagiri Peak trek and Hirekolale Lake.
+
+                    Overnight in Chikmagalur.</p>
+                  <h4>Day 6 – Chikmagalur ➜ Hampi (Approx. 6–7 hrs)</h4>
+                  <p>Early departure for Hampi (UNESCO site).
+
+                    Evening heritage walk along the Tungabhadra River.
+
+                    Overnight in Hampi.</p>
+                  <h4>Day 7 – Hampi Exploration</h4>
+                  <p>Guided tour of Vijaya Vittala Temple, Stone Chariot, Virupaksha Temple.
+
+                    Sunset from Hemakuta or Matanga Hill.
+
+                    Overnight in Hampi.</p>
+                  <h4>Day 8 – Hampi ➜ Badami / Pattadakal / Aihole</h4>
+                  <p>Drive to Badami, explore rock-cut cave temples.
+
+                    Visit Pattadakal & Aihole (Chalukyan architecture).
+
+                    Overnight in Badami.</p>
+                  <h4>Day 9 – Badami ➜ Bengaluru (or Goa Hub)</h4>
+                  <p>Return drive/overnight train to Bengaluru, or optional extension toward Goa’s beaches.
+
+                    Leisure evening in Bengaluru.
+
+                    Overnight in Bengaluru.
+                  </p>
+                  <hr>
+                  <h4>Day 10 – Departure</h4>
+                  <p>Transfer to airport/rail station for onward journey.</p>
+                  <h4>💡 Customization Options</h4>
+                  <p>Add Bandipur or Nagarhole Safari for wildlife lovers.
+
+                    Include Gokarna beaches for a coastal finale.
+
+                    Can be shortened to 7 days by skipping either Chikmagalur or Badami.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Odisha -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="konark-sun-temple.jpg"></img>
+              <div class="card-body">
+                <h1>Odisha</h1>
+                <p class="card-text">
+                <h5>🕉️ 9–10 Day Odisha Heritage Tour</h5>
+                <strong>Best Season: October–March</strong> <br>
+                <p>Highlights: Bhubaneswar • Puri • Konark • Chilika Lake • Tribal Villages • Bhitarkanika Wildlife</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalodisha">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Odisha -->
+          <div class="modal fade p-1" id="Modalodisha" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🏞️ 9–10 Day Odisha Heritage & Nature Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Highlights: Bhubaneswar • Puri • Konark • Chilika Lake • Tribal Villages • Bhitarkanika Wildlife
+                  </h5><br>
+                  <h4>Day 1 – Arrival in Bhubaneswar</h4>
+                  <p>Pickup from Biju Patnaik International Airport.
+
+                    Visit Lingaraj Temple, Mukteshwar Temple, and Khandagiri & Udayagiri Caves.
+
+                    Overnight in Bhubaneswar.</p>
+                  <h4>Day 2 – Bhubaneswar Sightseeing</h4>
+                  <p>Explore Dhauli Peace Pagoda (Ashokan edicts).
+
+                    Nandankanan Zoological Park and Odisha State Museum.
+
+                    Evening leisure. Overnight in Bhubaneswar.</p>
+                  <h4>Day 3 – Bhubaneswar ➜ Puri (Approx. 1.5–2 hrs)</h4>
+                  <p>Drive to Puri, check in at beach hotel.
+
+                    Visit Jagannath Temple and Golden Beach for sunset.
+
+                    Overnight in Puri.</p>
+                  <h4>Day 4 – Puri & Konark Sun Temple</h4>
+                  <p>Morning darshan at Jagannath Temple.
+
+                    Excursion to Konark Sun Temple (UNESCO World Heritage Site).
+
+                    Stop at Chandrabhaga Beach. Overnight in Puri.</p>
+                  <h4>Day 5 – Chilika Lake Excursion</h4>
+                  <p>Day trip to Satpada for dolphin-spotting boat ride on Asia’s largest brackish-water lagoon.
+
+                    Explore small islands and birding spots.
+
+                    Overnight in Puri.</p>
+                  <h4>Day 6 – Puri ➜ Gopalpur-on-Sea (Approx. 4–5 hrs)</h4>
+                  <p>Scenic coastal drive.
+
+                    Relax at quiet beaches, enjoy seafood.
+
+                    Overnight in Gopalpur.</p>
+                  <h4>Day 7 – Gopalpur ➜ Rayagada (Approx. 6–7 hrs)</h4>
+                  <p>Travel to Rayagada, gateway to tribal Odisha.
+
+                    Evening walk through local markets.
+
+                    Overnight in Rayagada.</p>
+                  <h4>Day 8 – Tribal Villages & Culture</h4>
+                  <p>Visit Dongria Kondh or Desia tribal villages (with local guide).
+
+                    Experience traditional crafts and weekly haats (markets).
+
+                    Overnight in Rayagada or nearby.</p>
+                  <h4>Day 9 – Rayagada ➜ Bhitarkanika National Park (Approx. 7–8 hrs)</h4>
+                  <p>
+
+                    Journey to Bhitarkanika mangrove sanctuary.
+
+                    Evening nature walk in the eco-resort area.
+
+                    Overnight in Bhitarkanika.</p>
+                  <h4>Day 10 – Bhitarkanika Safari & Departure</h4>
+                  <p>
+
+                    Morning boat safari to spot saltwater crocodiles and migratory birds.
+
+                    Drive back to Bhubaneswar (approx. 5–6 hrs) for onward flight/train.</p>
+                  <hr>
+                  <h4>💡 Customization Ideas
+                  </h4>
+                  <p>Add a night in Cuttack for the famous silver filigree handicrafts.
+
+                    Include Raghurajpur Heritage Artisan Village near Puri for Pattachitra art.
+
+                    Shorten to 6–7 days by focusing only on the Golden Triangle: Bhubaneswar–Puri–Konark.</p>
+
+
+
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Rajasthan -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="rajasthan.jpg"></img>
+              <div class="card-body">
+                <h1>Rajasthan</h1>
+                <p class="card-text">
+                <h5>🏰 9–10 Day Royal Heritage Tour</h5>
+                <strong>Best Season: October–March</strong> <br>
+                <p>Highlights: Jaipur • Jodhpur • Jaisalmer • Udaipur • Pushkar</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalrajasthan">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Rajasthan -->
+          <div class="modal fade p-1" id="Modalrajasthan" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🏰 9–10 Day Rajasthan Royal Heritage Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Highlights: Jaipur • Jodhpur • Jaisalmer • Udaipur • Pushkar
+                  </h5><br>
+                  <h4>Day 1 – Arrival in Jaipur (Pink City)</h4>
+                  <p>
+
+                    Pickup from Jaipur Airport/Railway Station.
+
+                    Visit City Palace, Jantar Mantar, and Hawa Mahal.
+
+                    Evening shopping at Johari & Bapu Bazaar.
+
+                    Overnight in Jaipur.</p>
+                  <h4>Day 2 – Jaipur Sightseeing</h4>
+                  <p>
+                    Morning excursion to Amber Fort (elephant/jeep ride).
+
+                    Stop at Jal Mahal for photos.
+
+                    Evening cultural show with Rajasthani folk dance & dinner.
+
+                    Overnight in Jaipur.</p>
+                  <h4>Day 3 – Jaipur ➜ Pushkar (Approx. 3–4 hrs)</h4>
+                  <p>
+
+                    Drive to holy town of Pushkar.
+
+                    Visit Brahma Temple and Pushkar Lake.
+
+                    Stroll through vibrant bazaars.
+
+                    Overnight in Pushkar.</p>
+                  <h4>Day 4 – Pushkar ➜ Jodhpur (Approx. 5 hrs)</h4>
+                  <p>
+
+                    Travel to the “Blue City” of Jodhpur.
+
+                    Explore Mehrangarh Fort and Jaswant Thada.
+
+                    Evening walk through the old city’s blue lanes & Clock Tower market.
+
+                    Overnight in Jodhpur.</p>
+                  <h4>Day 5 – Jodhpur ➜ Jaisalmer (Approx. 5–6 hrs)</h4>
+                  <p>
+
+                    Scenic desert drive to Jaisalmer.
+
+                    Sunset at Gadisar Lake.
+
+                    Overnight in Jaisalmer.</p>
+                  <h4>Day 6 – Jaisalmer Fort & Desert Safari</h4>
+                  <p>
+
+                    Tour Jaisalmer Fort (Sonar Quila), Patwon-ki-Haveli, and local markets.
+
+                    Afternoon camel safari in the Thar Desert with cultural program & dinner at Sam Sand Dunes.
+
+                    Overnight in desert camp or Jaisalmer hotel.</p>
+                  <h4>Day 7 – Jaisalmer ➜ Udaipur (Optional via Osian or Ranakpur)</h4>
+                  <p>
+
+                    Long drive (or train/flight via Jodhpur) to Udaipur, the “City of Lakes.”
+
+                    Relaxing evening boat ride on Lake Pichola.
+
+                    Overnight in Udaipur.</p>
+                  <h4>Day 8 – Udaipur Sightseeing</h4>
+                  <p>
+
+                    Visit City Palace, Jagdish Temple, Saheliyon-ki-Bari, and Bagore Ki Haveli.
+
+                    Evening free for lakeside cafés.
+
+                    Overnight in Udaipur.</p>
+                  <h4>Day 9 – Udaipur ➜ Mount Abu (Optional)</h4>
+                  <p>
+
+                    Day excursion to Mount Abu hill station.
+
+                    Explore Dilwara Jain Temples & Nakki Lake.
+
+                    Overnight in Mount Abu or return to Udaipur.</p>
+                  <h4>Day 10 – Departure</h4>
+                  <p>
+
+                    Transfer to Udaipur Airport or onward journey to Jaipur/Jodhpur as per schedule.</p>
+                  <hr>
+                  <h4>💡 Customization Options</h4>
+                  <p>
+
+                    Add a wildlife safari at Ranthambore National Park (ideal between Jaipur & Udaipur).
+
+                    Include Bikaner and Junagarh Fort if you prefer an expanded desert circuit.
+
+                    Can be shortened to a 7-day “Golden Triangle of Rajasthan” focusing on Jaipur, Jodhpur, and Udaipur.
+                  </p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assam -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img card-img-top img-thumbnail" width="100%" height="225"
+                src="assam.jpg"></img>
+              <div class="card-body">
+                <h1>Assam</h1>
+                <p class="card-text">
+                <h5>🌿 9–10 Day Assam Nature & Culture Tour</h5>
+                <strong>Best Season: November–April</strong> <br>
+                <p>Highlights: Guwahati • Kaziranga National Park • Majuli Island • Sivasagar • Tea Estates</p>
+                <div class=" flex-row align-items-center">
+                  <div class="btn-group ">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modalassam">
+                      View details »</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Assam -->
+          <div class="modal fade p-1" id="Modalassam" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">🌿 9–10 Day Assam Nature & Culture Tour</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5>Highlights: Guwahati • Kaziranga National Park • Majuli Island • Sivasagar • Tea Estates
+                  </h5><br>
+                  <h4>Day 1 – Arrival in Guwahati</h4>
+                  <p>
+
+                    Pickup from Lokpriya Gopinath Bordoloi International Airport.
+
+                    Visit Kamakhya Temple, Umananda Island (Brahmaputra River).
+
+                    Evening Brahmaputra sunset cruise.
+
+                    Overnight in Guwahati.</p>
+                  <h4>Day 2 – Guwahati ➜ Kaziranga National Park (Approx. 4–5 hrs)</h4>
+                  <p>
+
+                    Scenic drive through lush countryside.
+
+                    Check-in at jungle lodge.
+
+                    Evening tribal dance or cultural program.
+
+                    Overnight in Kaziranga.</p>
+                  <h4>Day 3 – Kaziranga Safari</h4>
+                  <p>
+
+                    Early-morning elephant safari for one-horned rhinoceros spotting.
+
+                    Afternoon jeep safari in a different zone for tigers, wild buffalo, and birds.
+
+                    Overnight in Kaziranga.</p>
+                  <h4>Day 4 – Kaziranga ➜ Majuli Island</h4>
+                  <p>
+
+                    Drive to Nimati Ghat and ferry to Majuli (world’s largest river island).
+
+                    Visit Satras (Vaishnavite monasteries) and enjoy local Mishing tribal culture.
+
+                    Overnight in a traditional bamboo cottage/homestay.</p>
+                  <h4>Day 5 – Majuli Exploration</h4>
+                  <p>
+
+                    Cycle or walk through villages, mask-making workshops, and pottery centers.
+
+                    Sunset photography along the Brahmaputra River.
+
+                    Overnight in Majuli.</p>
+                  <h4>Day 6 – Majuli ➜ Sivasagar (Approx. 3 hrs)</h4>
+                  <p>
+
+                    Travel to Sivasagar, former Ahom kingdom capital.
+
+                    Explore Rang Ghar amphitheatre, Talatal Ghar, and Sivasagar Sivadol Temple.
+
+                    Overnight in Sivasagar or nearby.</p>
+                  <h4>Day 7 – Sivasagar ➜ Jorhat Tea Country (Approx. 2 hrs)</h4>
+                  <p>
+
+                    Head to Jorhat’s tea estates.
+
+                    Guided tea garden tour and tea-tasting session.
+
+                    Evening free in colonial-era bungalow.
+
+                    Overnight in Jorhat.</p>
+                  <h4>Day 8 – Jorhat ➜ Haflong (Optional Hill Station)</h4>
+                  <p>
+
+                    Scenic drive to Haflong, known as the “Switzerland of the East.”
+
+                    Visit Haflong Lake and ethnic Dimasa villages.
+
+                    Overnight in Haflong.
+                  </p>
+                  <h4>Day 9 – Haflong ➜ Guwahati</h4>
+                  <p>
+
+                    Return to Guwahati (or direct flight from Silchar if preferred).
+
+                    Last-minute shopping for Assamese silk and handicrafts.
+
+                    Overnight in Guwahati.</p>
+                  <h4>Day 10 – Departure</h4>
+                  <p>
+
+                    Transfer to Guwahati Airport for onward journey.</p>
+
+                  <hr>
+                  <h4>💡 Customization Ideas</h4>
+                  <p>
+                    Add Pobitora Wildlife Sanctuary (close to Guwahati) for another rhino experience.
+
+                    Include a river cruise to the Umananda or Peacock Island for birdwatching.
+
+                    Shorten to 6–7 days by focusing on Guwahati, Kaziranga, and Majuli only.
+                  </p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer class="footer mt-auto pt-3 pb-2 footer-dark bg-dark">
+    <div class="container">
+      <p class="float-md-right "><a href="#">Back to top</a></p>
+      <p class="text-muted ">© 2025-2026 MyEdventures, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
